@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1552B7DC85B74586F6372C0F /* Pods_CompareKart_v1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FD2E0A1373F36A5953EBC0 /* Pods_CompareKart_v1Tests.framework */; };
+		4B1E6E5CC3AFC9B836860C92 /* Pods_CompareKart_v1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 793E687EB9C7A016C2CA5281 /* Pods_CompareKart_v1.framework */; };
 		594E9DF91EA39F7100284925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594E9DF81EA39F7100284925 /* AppDelegate.swift */; };
 		594E9DFB1EA39F7100284925 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594E9DFA1EA39F7100284925 /* ViewController.swift */; };
 		594E9DFE1EA39F7100284925 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594E9DFC1EA39F7100284925 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		594E9E031EA39F7100284925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594E9E011EA39F7100284925 /* LaunchScreen.storyboard */; };
 		594E9E0E1EA39F7100284925 /* CompareKart_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594E9E0D1EA39F7100284925 /* CompareKart_v1Tests.swift */; };
 		594E9E191EA39F7100284925 /* CompareKart_v1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594E9E181EA39F7100284925 /* CompareKart_v1UITests.swift */; };
+		A825CE5D88FFA07AAD717AEF /* Pods_CompareKart_v1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B51C1E2447DB26E90B64F851 /* Pods_CompareKart_v1UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37FD2E0A1373F36A5953EBC0 /* Pods_CompareKart_v1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompareKart_v1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D444DFC14B575F039160C5F /* Pods-CompareKart-v1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompareKart-v1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompareKart-v1/Pods-CompareKart-v1.debug.xcconfig"; sourceTree = "<group>"; };
 		594E9DF51EA39F7100284925 /* CompareKart-v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CompareKart-v1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594E9DF81EA39F7100284925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		594E9DFA1EA39F7100284925 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		594E9E141EA39F7100284925 /* CompareKart-v1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CompareKart-v1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594E9E181EA39F7100284925 /* CompareKart_v1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareKart_v1UITests.swift; sourceTree = "<group>"; };
 		594E9E1A1EA39F7100284925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66D34ED71BAAE14831667C12 /* Pods-CompareKart-v1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompareKart-v1UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompareKart-v1UITests/Pods-CompareKart-v1UITests.release.xcconfig"; sourceTree = "<group>"; };
+		793E687EB9C7A016C2CA5281 /* Pods_CompareKart_v1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompareKart_v1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AEC02614DBA842F9C84C1F2 /* Pods-CompareKart-v1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompareKart-v1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompareKart-v1UITests/Pods-CompareKart-v1UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		970DE70BCAF7746A79012639 /* Pods-CompareKart-v1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompareKart-v1Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompareKart-v1Tests/Pods-CompareKart-v1Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B51C1E2447DB26E90B64F851 /* Pods_CompareKart_v1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompareKart_v1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71E860B33D1DB2853D7C7E0 /* Pods-CompareKart-v1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompareKart-v1.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompareKart-v1/Pods-CompareKart-v1.release.xcconfig"; sourceTree = "<group>"; };
+		F0B5E59A465D938C52C5F04A /* Pods-CompareKart-v1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompareKart-v1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompareKart-v1Tests/Pods-CompareKart-v1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B1E6E5CC3AFC9B836860C92 /* Pods_CompareKart_v1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1552B7DC85B74586F6372C0F /* Pods_CompareKart_v1Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A825CE5D88FFA07AAD717AEF /* Pods_CompareKart_v1UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02C8D6981D4F1335D86A2DB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D444DFC14B575F039160C5F /* Pods-CompareKart-v1.debug.xcconfig */,
+				C71E860B33D1DB2853D7C7E0 /* Pods-CompareKart-v1.release.xcconfig */,
+				F0B5E59A465D938C52C5F04A /* Pods-CompareKart-v1Tests.debug.xcconfig */,
+				970DE70BCAF7746A79012639 /* Pods-CompareKart-v1Tests.release.xcconfig */,
+				8AEC02614DBA842F9C84C1F2 /* Pods-CompareKart-v1UITests.debug.xcconfig */,
+				66D34ED71BAAE14831667C12 /* Pods-CompareKart-v1UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		594E9DEC1EA39F7100284925 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				594E9E0C1EA39F7100284925 /* CompareKart-v1Tests */,
 				594E9E171EA39F7100284925 /* CompareKart-v1UITests */,
 				594E9DF61EA39F7100284925 /* Products */,
+				02C8D6981D4F1335D86A2DB8 /* Pods */,
+				C08770D81B2EE84DB8D8B2BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = "CompareKart-v1UITests";
 			sourceTree = "<group>";
 		};
+		C08770D81B2EE84DB8D8B2BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				793E687EB9C7A016C2CA5281 /* Pods_CompareKart_v1.framework */,
+				37FD2E0A1373F36A5953EBC0 /* Pods_CompareKart_v1Tests.framework */,
+				B51C1E2447DB26E90B64F851 /* Pods_CompareKart_v1UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 594E9E1D1EA39F7100284925 /* Build configuration list for PBXNativeTarget "CompareKart-v1" */;
 			buildPhases = (
+				68AA9D1047657F6776A54172 /* [CP] Check Pods Manifest.lock */,
 				594E9DF11EA39F7100284925 /* Sources */,
 				594E9DF21EA39F7100284925 /* Frameworks */,
 				594E9DF31EA39F7100284925 /* Resources */,
+				DBF1B06BB9A7F8D9AF395358 /* [CP] Embed Pods Frameworks */,
+				08A4AB55B11F33B12772E695 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 594E9E201EA39F7100284925 /* Build configuration list for PBXNativeTarget "CompareKart-v1Tests" */;
 			buildPhases = (
+				15970E2E98394C216B979720 /* [CP] Check Pods Manifest.lock */,
 				594E9E051EA39F7100284925 /* Sources */,
 				594E9E061EA39F7100284925 /* Frameworks */,
 				594E9E071EA39F7100284925 /* Resources */,
+				CB489E0942753E7ADBAEB4D8 /* [CP] Embed Pods Frameworks */,
+				C7FD3B16671DC728C956D055 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 594E9E231EA39F7100284925 /* Build configuration list for PBXNativeTarget "CompareKart-v1UITests" */;
 			buildPhases = (
+				030501C94BA4A0F8E99BB4BE /* [CP] Check Pods Manifest.lock */,
 				594E9E101EA39F7100284925 /* Sources */,
 				594E9E111EA39F7100284925 /* Frameworks */,
 				594E9E121EA39F7100284925 /* Resources */,
+				C6125F3EC7253AF5F918C1A2 /* [CP] Embed Pods Frameworks */,
+				BD07BB8D20333F7970A9EB02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		030501C94BA4A0F8E99BB4BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		08A4AB55B11F33B12772E695 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompareKart-v1/Pods-CompareKart-v1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15970E2E98394C216B979720 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		68AA9D1047657F6776A54172 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD07BB8D20333F7970A9EB02 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompareKart-v1UITests/Pods-CompareKart-v1UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6125F3EC7253AF5F918C1A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompareKart-v1UITests/Pods-CompareKart-v1UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7FD3B16671DC728C956D055 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompareKart-v1Tests/Pods-CompareKart-v1Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB489E0942753E7ADBAEB4D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompareKart-v1Tests/Pods-CompareKart-v1Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBF1B06BB9A7F8D9AF395358 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CompareKart-v1/Pods-CompareKart-v1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		594E9DF11EA39F7100284925 /* Sources */ = {
@@ -410,6 +597,7 @@
 		};
 		594E9E1E1EA39F7100284925 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D444DFC14B575F039160C5F /* Pods-CompareKart-v1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CompareKart-v1/Info.plist";
@@ -422,6 +610,7 @@
 		};
 		594E9E1F1EA39F7100284925 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C71E860B33D1DB2853D7C7E0 /* Pods-CompareKart-v1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CompareKart-v1/Info.plist";
@@ -434,6 +623,7 @@
 		};
 		594E9E211EA39F7100284925 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0B5E59A465D938C52C5F04A /* Pods-CompareKart-v1Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -448,6 +638,7 @@
 		};
 		594E9E221EA39F7100284925 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 970DE70BCAF7746A79012639 /* Pods-CompareKart-v1Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,6 +653,7 @@
 		};
 		594E9E241EA39F7100284925 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AEC02614DBA842F9C84C1F2 /* Pods-CompareKart-v1UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "CompareKart-v1UITests/Info.plist";
@@ -475,6 +667,7 @@
 		};
 		594E9E251EA39F7100284925 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66D34ED71BAAE14831667C12 /* Pods-CompareKart-v1UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "CompareKart-v1UITests/Info.plist";

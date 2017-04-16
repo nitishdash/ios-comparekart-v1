@@ -1,0 +1,6 @@
+framework module Pods_CompareKart_v1Tests {
+  umbrella header "Pods-CompareKart-v1Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
