@@ -16,6 +16,7 @@
 		594E9E031EA39F7100284925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594E9E011EA39F7100284925 /* LaunchScreen.storyboard */; };
 		594E9E0E1EA39F7100284925 /* CompareKart_v1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594E9E0D1EA39F7100284925 /* CompareKart_v1Tests.swift */; };
 		594E9E191EA39F7100284925 /* CompareKart_v1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594E9E181EA39F7100284925 /* CompareKart_v1UITests.swift */; };
+		594E9E271EA4705C00284925 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594E9E261EA4705C00284925 /* InitialVC.swift */; };
 		A825CE5D88FFA07AAD717AEF /* Pods_CompareKart_v1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B51C1E2447DB26E90B64F851 /* Pods_CompareKart_v1UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		594E9E141EA39F7100284925 /* CompareKart-v1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CompareKart-v1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594E9E181EA39F7100284925 /* CompareKart_v1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareKart_v1UITests.swift; sourceTree = "<group>"; };
 		594E9E1A1EA39F7100284925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		594E9E261EA4705C00284925 /* InitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
 		66D34ED71BAAE14831667C12 /* Pods-CompareKart-v1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompareKart-v1UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompareKart-v1UITests/Pods-CompareKart-v1UITests.release.xcconfig"; sourceTree = "<group>"; };
 		793E687EB9C7A016C2CA5281 /* Pods_CompareKart_v1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompareKart_v1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AEC02614DBA842F9C84C1F2 /* Pods-CompareKart-v1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompareKart-v1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompareKart-v1UITests/Pods-CompareKart-v1UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				594E9DF81EA39F7100284925 /* AppDelegate.swift */,
+				594E9E261EA4705C00284925 /* InitialVC.swift */,
 				594E9DFA1EA39F7100284925 /* ViewController.swift */,
 				594E9DFC1EA39F7100284925 /* Main.storyboard */,
 				594E9DFF1EA39F7100284925 /* Assets.xcassets */,
@@ -446,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				594E9E271EA4705C00284925 /* InitialVC.swift in Sources */,
 				594E9DFB1EA39F7100284925 /* ViewController.swift in Sources */,
 				594E9DF91EA39F7100284925 /* AppDelegate.swift in Sources */,
 			);
@@ -698,6 +702,7 @@
 				594E9E1F1EA39F7100284925 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		594E9E201EA39F7100284925 /* Build configuration list for PBXNativeTarget "CompareKart-v1Tests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +711,7 @@
 				594E9E221EA39F7100284925 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		594E9E231EA39F7100284925 /* Build configuration list for PBXNativeTarget "CompareKart-v1UITests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +720,7 @@
 				594E9E251EA39F7100284925 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
