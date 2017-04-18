@@ -142,6 +142,7 @@ class ViewController: UIViewController , ChartViewDelegate {
                     
                     SVProgressHUD.dismiss()
                     
+                    //remove after commit
                     
                     
                 }
