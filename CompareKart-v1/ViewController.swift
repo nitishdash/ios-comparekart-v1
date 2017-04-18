@@ -10,9 +10,13 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import Charts
+import SVProgressHUD
+
 
 
 class ViewController: UIViewController , ChartViewDelegate {
+    
+    
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var lowestPriceLabel: UILabel!
     @IBOutlet weak var trackingSinceLabel: UILabel!
@@ -29,10 +33,15 @@ class ViewController: UIViewController , ChartViewDelegate {
     
     var datesData = [""]
     
+    var outMessage = ""
+    
     var lowestPrice = 0.00
     var lowestPriceOn = ""
  
     var currentPrice = 0.00
+    
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,87 +53,190 @@ class ViewController: UIViewController , ChartViewDelegate {
         self.datesData.removeAll()
         
         
-        Alamofire.request("http://192.168.83.1/laravel/blog/public/api/product?pid=MOBEQHMGED7F9CZ2").responseJSON { response in
-            
-            if let value = response.result.value {
-                let json = JSON(value)
+        
+        //show progress popup
+        SVProgressHUD.show(withStatus: "Loading, please wait")
+        
+        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+        
+   
+        
+        Alamofire.request("http://192.168.83.1/laravel/blog/public/api/product?pid=MOBEQHMGED7F9CZ2").validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                print("Validation Successful")
                 
-                print(json)
-                
-                 let count: Int? = json["trackingDetails"].array?.count   //check for the maximum count in json array
-                
-                var min = 0.00  //trash variable for checking minimum price
-
-                
-                for index in 0...count!-1 {
+                if let value = response.result.value {
+                    let json = JSON(value)
                     
-                    if index == 0 {
-                        min = json["trackingDetails"][0]["price"].doubleValue
-                    }
+                    print(json)
                     
-                    //determining lowest price of product :P No ALGO!
-                    if min>json["trackingDetails"][index]["price"].doubleValue {
-                        min=json["trackingDetails"][index]["price"].doubleValue
+                    let count: Int? = json["trackingDetails"].array?.count   //check for the maximum count in json array
+                    
+                    var min = 0.00  //trash variable for checking minimum price
+                    
+                    
+                    for index in 0...count!-1 {
                         
-                        self.lowestPriceOn = json["trackingDetails"][index]["date"].stringValue
+                        if index == 0 {
+                            min = json["trackingDetails"][0]["price"].doubleValue
+                        }
+                        
+                        //determining lowest price of product :P No ALGO!
+                        if min>json["trackingDetails"][index]["price"].doubleValue {
+                            min=json["trackingDetails"][index]["price"].doubleValue
+                            
+                            self.lowestPriceOn = json["trackingDetails"][index]["date"].stringValue
+                        }
+                        
+                        self.priceData.append(json["trackingDetails"][index]["price"].doubleValue)
+                        
+                        self.datesData.append(json["trackingDetails"][index]["Name"].stringValue)
+                        
                     }
                     
-                    self.priceData.append(json["trackingDetails"][index]["price"].doubleValue)
+                    //set the product name
+                    self.productNameLabel.text=json["productDetails"][0]["title"].stringValue
                     
-                    self.datesData.append(json["trackingDetails"][index]["Name"].stringValue)
+                    
+                    
+                    
+                    let str=json["productDetails"][0]["dateOfAddition"].stringValue
+                    
+                    
+                    let index = str.index(str.startIndex, offsetBy: 10)
+                    
+                    
+                    
+                    
+                    self.trackingSinceLabel.text=str.substring(to: index)
+                    
+                    
+                    
+                    let index2 = self.lowestPriceOn.index(str.startIndex, offsetBy: 10)
+                    
+                    
+                    self.lowestPriceOnLabel.text = "on: "+self.lowestPriceOn.substring(to: index2)
+                    
+                    
+                    self.currentPrice = json["trackingDetails"][0]["mrp"].doubleValue
+                    self.lowestPrice = min
+                    
+                    self.currentPriceLabel.text = String(self.currentPrice)
+                    
+                    
+                    self.lowestPriceLabel.text = String(self.lowestPrice)
+                    
+                    // 1
+                    self.lineChartView.delegate = self
+                    // 2
+                    self.lineChartView.chartDescription?.text = "Tap node for details"
+                    // 3
+                    self.lineChartView.chartDescription?.textColor = UIColor.black
+                    self.lineChartView.gridBackgroundColor = UIColor.clear
+                    // 4
+                    self.lineChartView.noDataText = "No data provided"
+                    // 5
+                    self.setChartData(months: self.datesData)
+                    
+                    
+                    SVProgressHUD.dismiss()
+                    
+                    
                     
                 }
-                
-                //set the product name
-                self.productNameLabel.text=json["productDetails"][0]["title"].stringValue
-                
-                
-                
-                
-                let str=json["productDetails"][0]["dateOfAddition"].stringValue
-                
-                
-                let index = str.index(str.startIndex, offsetBy: 10)
-                
-                
-                
-                
-                self.trackingSinceLabel.text=str.substring(to: index)
-                
-                
-                
-                let index2 = self.lowestPriceOn.index(str.startIndex, offsetBy: 10)
-                
-                
-                self.lowestPriceOnLabel.text = "on: "+self.lowestPriceOn.substring(to: index2)
-                
-                
-                self.currentPrice = json["trackingDetails"][0]["mrp"].doubleValue
-                self.lowestPrice = min
-                
-                self.currentPriceLabel.text = String(self.currentPrice)
-                
-                
-                self.lowestPriceLabel.text = String(self.lowestPrice)
-                
-                // 1
-                self.lineChartView.delegate = self
-                // 2
-                self.lineChartView.chartDescription?.text = "Tap node for details"
-                // 3
-                self.lineChartView.chartDescription?.textColor = UIColor.black
-                self.lineChartView.gridBackgroundColor = UIColor.clear
-                // 4
-                self.lineChartView.noDataText = "No data provided"
-                // 5
-                self.setChartData(months: self.datesData)
-                
-                
-                
-                
 
+            //if it HTTP request failed, then execute the following
+            case .failure(let error):
+                SVProgressHUD.dismiss()
+                SVProgressHUD.showError(withStatus: "Uh oh! Something's not right! 😰")
+                print(error)
             }
         }
+        
+        
+//        Alamofire.request("http://192.168.83.1/laravel/blog/public/api/product?pid=MOBEQHMGED7F9CZ2").responseJSON { response in
+//            
+//            if let value = response.result.value {
+//                let json = JSON(value)
+//                
+//                print(json)
+//                
+//                 let count: Int? = json["trackingDetails"].array?.count   //check for the maximum count in json array
+//                
+//                var min = 0.00  //trash variable for checking minimum price
+//
+//                
+//                for index in 0...count!-1 {
+//                    
+//                    if index == 0 {
+//                        min = json["trackingDetails"][0]["price"].doubleValue
+//                    }
+//                    
+//                    //determining lowest price of product :P No ALGO!
+//                    if min>json["trackingDetails"][index]["price"].doubleValue {
+//                        min=json["trackingDetails"][index]["price"].doubleValue
+//                        
+//                        self.lowestPriceOn = json["trackingDetails"][index]["date"].stringValue
+//                    }
+//                    
+//                    self.priceData.append(json["trackingDetails"][index]["price"].doubleValue)
+//                    
+//                    self.datesData.append(json["trackingDetails"][index]["Name"].stringValue)
+//                    
+//                }
+//                
+//                //set the product name
+//                self.productNameLabel.text=json["productDetails"][0]["title"].stringValue
+//                
+//                
+//                
+//                
+//                let str=json["productDetails"][0]["dateOfAddition"].stringValue
+//                
+//                
+//                let index = str.index(str.startIndex, offsetBy: 10)
+//                
+//                
+//                
+//                
+//                self.trackingSinceLabel.text=str.substring(to: index)
+//                
+//                
+//                
+//                let index2 = self.lowestPriceOn.index(str.startIndex, offsetBy: 10)
+//                
+//                
+//                self.lowestPriceOnLabel.text = "on: "+self.lowestPriceOn.substring(to: index2)
+//                
+//                
+//                self.currentPrice = json["trackingDetails"][0]["mrp"].doubleValue
+//                self.lowestPrice = min
+//                
+//                self.currentPriceLabel.text = String(self.currentPrice)
+//                
+//                
+//                self.lowestPriceLabel.text = String(self.lowestPrice)
+//                
+//                // 1
+//                self.lineChartView.delegate = self
+//                // 2
+//                self.lineChartView.chartDescription?.text = "Tap node for details"
+//                // 3
+//                self.lineChartView.chartDescription?.textColor = UIColor.black
+//                self.lineChartView.gridBackgroundColor = UIColor.clear
+//                // 4
+//                self.lineChartView.noDataText = "No data provided"
+//                // 5
+//                self.setChartData(months: self.datesData)
+//                
+//                
+//                SVProgressHUD.dismiss()
+//                
+//                
+//
+//            }
+//        }
         
         
         

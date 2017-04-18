@@ -8,6 +8,7 @@ pod ‘Charts’
   	pod 'SwiftyJSON'
  pod 'Alamofire', '~> 4.4'	
 pod 'SDWebImage', '~>3.8'
+pod ‘SVProgressHUD’
 
   # Pods for CompareKart-v1
 
